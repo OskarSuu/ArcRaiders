@@ -1,5 +1,15 @@
 This repository serves as a collection of assets from inside the game ARC Raiders.
 
+## $100 Item Image Bounty
+
+There is a **$100 bounty** for the first person to get the rest of all item images.
+
+## Repository Note
+
+The original creator of this repository, `astroval0`, chose to archive it. This version was reopened so the asset collection can keep being updated and remain useful to the community.
+
+Personal note from OskarSuu: I think it is weird behavior to close something like this when it matters so much to other people.
+
 The `.blend` files have packed textures and are made for Blender 5.0 and above. There may be issues opening them in older Blender versions.
 
 The goal is to make ARC Raiders assets easy to access and use. This repository will not include unreleased assets.
