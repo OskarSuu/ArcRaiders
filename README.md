@@ -1,38 +1,75 @@
 This repository serves as a collection of assets from inside the game ARC Raiders.
 
-The .blend files have packed textures and are for versions 5.0 and above, There may be issues opening them on lower versions.
+The `.blend` files have packed textures and are made for Blender 5.0 and above. There may be issues opening them in older Blender versions.
 
-I'm adding more soon! feel free to make suggestions via an 'Issue' on the repo
+The goal is to make ARC Raiders assets easy to access and use. This repository will not include unreleased assets.
 
-The goal is to have easy accessible assets for anyone to use.
+Suggestions and pull requests are welcome.
 
-This will not hold unreleased assets, for obvious reasons.
+# How To Rip ARC Raiders Assets With Ninja Ripper
 
-# Alright -- Im a lot more busy nowadays so i can't really work on this project, so i'm going to show my methods. note you can get banned (i havent after many months of doing it, so use at your own risk. tbh at worst you'll get a temp ban - it will probably get patched soon now that they're doing more on the anticheat side). 
+> Ripping assets from a live game can come with account or anti-cheat risk. Use this method at your own risk.
 
-**step 1, get NinjaRipper! I use version 2.12 you can pay 5$ for on their patreon.**
+## Requirements
 
-**step 2, fully close steam (right click in tray - press exit).**
+- Ninja Ripper. This guide was written around version 2.12.
+- The Ninja Ripper Blender import plugin.
+- Steam fully closed before starting.
 
-**step 3, launch steam.exe through NinjaRipper**
+## Step 1: Close Steam
 
-**step 4, open the properties of arc raiders game in your steam library, add launch arg: '-nothreadtimeout' (this is because the game will hang for a fat min while it rips assets. so to make sure you gather as much as you can, you dont want a thread timeout)**
+Fully exit Steam before starting Ninja Ripper.
 
-**step 5, just launch arc raiders as normal through steam**
+Right-click Steam in your system tray and select **Exit**.
 
-**step 6, while in game - you can press your rip keys and change settings as needed to capture!**
+## Step 2: Launch Steam Through Ninja Ripper
 
-**step optional 7, you can check PioneerGame.exe inside your rips folder after ripping for all models and textures, you will find any UI icons or images that were on screen at the time of the rip inside here as well.**
+Open Ninja Ripper and use it to launch `steam.exe`.
 
-**step optional 8, when importing to blender using the ninjaripper blender plugin, for arc raiders specifically, in raid captures should be using the same FOV as in your game's settings (max 80) with specified resolution matching your game's screen resolution - i.e I use fullscreen at 1920x1080 so thats the resolution i specify. I believe in lobby FOV is 35, but it may vary.**
+This makes Steam, and then ARC Raiders, run through Ninja Ripper.
 
-**enjoy, and always feel free to make a pull request with any additions. i will be active enough to look over and merge them :D**
+## Step 3: Add The ARC Raiders Launch Argument
 
-hopefully some day someone cracks the AES encryption and all this asset extraction comes with no risk and much easier/better, but until then this is the best way :P
+In Steam, open the ARC Raiders game properties and add this launch argument:
 
+```text
+-nothreadtimeout
+```
 
-currently  no 3d models will be rigged, i'm working on this though :)
+This helps prevent the game from timing out while Ninja Ripper pauses or hangs during capture.
+
+## Step 4: Launch ARC Raiders
+
+Launch ARC Raiders normally through Steam.
+
+Once the game is running, go to the area or menu that contains the asset you want to capture.
+
+## Step 5: Capture The Assets
+
+While in game, press your Ninja Ripper rip hotkey.
+
+You can adjust Ninja Ripper settings and capture again as needed.
+
+## Step 6: Find The Rip Output
+
+After ripping, check the `PioneerGame.exe` folder inside your Ninja Ripper output directory.
+
+This folder should contain captured models and textures. UI icons and images that were visible on screen during the rip may appear here too.
+
+## Step 7: Import Into Blender
+
+Use the Ninja Ripper Blender plugin to import the captured files.
+
+For ARC Raiders raid captures, use the same FOV as your in-game setting. The maximum in-game FOV is 80.
+
+Set the import resolution to match your game resolution. For example, if you captured in fullscreen at `1920x1080`, import using `1920x1080`.
+
+Lobby captures may use an FOV around 35, but this can vary.
+
+## Notes
+
+Currently, no 3D models are rigged.
 
 ![Arc Raiders Queen](queen.png)
 
-Little side note about the queen model: I was lazy on retexturing and skipped the main shaders, just going straight for a basic diffuse and normal, so it will look different to in game, i may improve on this later.
+Queen model note: the current textures use a basic diffuse and normal setup instead of the full in-game shader setup, so the model may look different from how it appears in game.
